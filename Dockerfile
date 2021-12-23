@@ -13,6 +13,7 @@ RUN apt-get update -q && \
         bzip2 \
         ca-certificates \
         git \
+        git-lfs \
         libglib2.0-0 \
         libsm6 \
         libxext6 \
@@ -61,7 +62,7 @@ RUN set -x && \
     conda install -c conda-forge notebook; \
     conda update --all -y; \
     conda clean --all -y; \
-    wget "https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.0-linux-x86_64.tar.gz" -O julia.tar.gz; \
+    wget "https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.1-linux-x86_64.tar.gz" -O julia.tar.gz; \
     mkdir "$JULIA_PATH"; \
   	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; \
   	rm julia.tar.gz; \

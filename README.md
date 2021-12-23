@@ -1,5 +1,5 @@
 # Workbench
-🛠️ Docker ENV for PhD projects
+> 🛠️ Docker ENV for PhD projects.
 
 ## Introduction
 
@@ -7,7 +7,7 @@ This repository is used to store the Docker Environment needed for work, i.e. `D
 
 ## Environment
 
-- Julia (v1.7.0)
+- Julia (v1.7.1)
 - Miniconda3 (lastest)
 
 ## Notes
