@@ -65,7 +65,7 @@ RUN set -x && \
     mkdir "$JULIA_PATH"; \
   	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; \
   	rm julia.tar.gz; \
-    wget -P /opt/julia/etc/julia https://raw.githubusercontent.com/ZenanH/Workbench/main/temp.jl -O startup.jl; \
+    wget https://raw.githubusercontent.com/ZenanH/Workbench/main/temp.jl -O /opt/julia/etc/julia/startup.jl; \
     wget https://raw.githubusercontent.com/ZenanH/Workbench/main/installation.jl; \
     julia installation.jl; \
     rm installation.jl; \
