@@ -7,7 +7,7 @@ This repository is used to store the Docker Environment needed for work, i.e. `D
 
 ## Environment
 
-- Julia (v1.7.1)
+- Julia (v1.7.2)
 - Miniconda3 (lastest)
 
 ## Notes
