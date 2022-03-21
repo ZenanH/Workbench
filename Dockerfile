@@ -67,9 +67,6 @@ RUN set -x && \
   	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; \
   	rm julia.tar.gz; \
     wget https://raw.githubusercontent.com/ZenanH/Workbench/main/Project.toml -P /root/.julia/environments/v1.7/; \
-    wget https://raw.githubusercontent.com/ZenanH/Workbench/main/temp.jl -O /opt/julia/etc/julia/startup.jl; \
-    wget https://raw.githubusercontent.com/ZenanH/Workbench/main/installation.jl; \
-    julia installation.jl; \
-    rm installation.jl; \
-    rm -f /opt/julia/etc/julia/startup.jl; \
+    export CONDA_JL_HOME="/opt/conda/bin"; \
+    julia -e 'using Pkg; Pkg.update(); Pkg.build(); Pkg.precompile(); Pkg.gc()'; \
     wget -P /opt/julia/etc/julia https://raw.githubusercontent.com/ZenanH/Workbench/main/startup.jl;
